@@ -29,6 +29,7 @@ En esta pagina se mostrara la bienvenida al sistema
     <li>{{ forloop.counter }}. {{ estudiante }}</li>
     {% endfor %}
   </ul>
-  
+  {% include 'filtros.html' with encabezado="Uso de Filtros" %}
+
   <p>Año: 2023</p>
 {% endblock %}
