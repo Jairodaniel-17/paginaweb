@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 
 layout = """
-<h1> Proyecto Web (LP3) | Diego Laura </h1>
+<h1> Proyecto Web (LP3) | Jairo Daniel Mendoza Torres </h1>
 <hr/>
 <ul>
 <li>
@@ -71,9 +71,34 @@ def rango2(request, a=0, b=100):
     return HttpResponse(layout + resultado)
 
 
-"""
 def index(request):
-    return render(request, "/inicio"), {
-        "mensaje": "Proyecto web con Django (Desde el View)"
-    }
-"""
+    return render(
+        request, "index.html", {"mensaje": "Proyecto web con Django (Desde el View)"}
+    )
+
+
+def saludo(request):
+    return render(
+        request,
+        "saludo.html",
+        {"titulo": "Saludo", "autor_saludo": "Jairo Daniel Mendoza Torres"},
+    )
+
+
+def index(request):
+    estudiantes = [
+        "Diana Quispe",
+        "Armando Requejo",
+        "Shantall Palomino",
+        "Celia Torres",
+    ]
+
+    return render(
+        request,
+        "index.html",
+        {
+            "titulo": "Inicio",
+            "mensaje": "Proyecto Web Con DJango",
+            "estudiantes": estudiantes,
+        },
+    )

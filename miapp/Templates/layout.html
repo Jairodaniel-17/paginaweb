@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <title>
-            {% block title %}
-            {% endblock %}
+            {% block title %}{% endblock %}
             | Jairo Mendoza
         </title>
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-
     </head>
     <body>
         <header>
@@ -21,16 +19,16 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/inicio" color=#43977e> Inicio</a>
+                    <a href="/inicio" color=#43977e>Inicio</a>
                 </li>
                 <li>
-                    <a href="/saludo"> Mensaje de Saludo</a>
+                    <a href="/saludo">Mensaje de Saludo</a>
                 </li>
                 <li>
-                    <a href="/rango"> Mostrar Números [a,b]</a>
+                    <a href="/rango">Mostrar Números [a,b]</a>
                 </li>
                 <li>
-                    <a href="/rango2/10/15"> Mostrar Números [10,15]</a>
+                    <a href="/rango2/10/15">Mostrar Números [10,15]</a>
                 </li>
             </ul>
         </nav>
@@ -41,14 +39,12 @@
         </div>
         <div id="content">
             <div class="box">
-            <h2 class="title">Titulo de contenido (de prueba)</h2>
-            {% block content %}
-            <strong> Contenido en layout (Padre) </strong>
-            {% endblock %}
+                <h2 class="title">Titulo de contenido (de prueba)</h2>
+                {% block content %}<strong>Contenido en layout (Padre)</strong>{% endblock %}
             </div>
-            </div>
-            
+        </div>
         <footer>
             UNTELS - Lenguaje de Programación III &copy; Flor Cerdán
         </footer>
     </body>
+</html>
