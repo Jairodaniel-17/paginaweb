@@ -25,7 +25,10 @@ En esta pagina se mostrara la bienvenida al sistema
     <strong>Estudiantes Registrados (Método 02: Imprime lista utilizando for):</strong>
   </p>
   <ul>
-    {% for estudiante in estudiantes %}<li>{{ forloop.counter }}. {{ estudiante }}</li>{% endfor %}
+    {% for estudiante in estudiantes %}
+    <li>{{ forloop.counter }}. {{ estudiante }}</li>
+    {% endfor %}
   </ul>
+  
   <p>Año: 2023</p>
 {% endblock %}

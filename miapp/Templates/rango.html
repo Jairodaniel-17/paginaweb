@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Saludo{% endblock %}
+
+{% block content %}
+    <h1 class="title">Numeros de [10, 20]</h1>
+    <ul>
+        {% for numero in numeros %}
+            <li>{{ numero }}</li>
+        {% endfor %}
+    </ul>
+    {{ block.super }}
+{% endblock %}

@@ -102,3 +102,13 @@ def index(request):
             "estudiantes": estudiantes,
         },
     )
+
+
+def rango(request):
+    a = 10
+    b = 20
+    return render(
+        request,
+        "rango.html",
+        {"titulo": "Rango", "a": a, "b": b, "numeros": range(a, b + 1)},
+    )
