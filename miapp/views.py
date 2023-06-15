@@ -20,11 +20,14 @@ layout = """
 </ul>
 <hr/>
 """
+
+
 def index(request):
-    return render(request,'index.html')
+    return render(request, "index.html")
+
 
 def saludo(request):
-    return render(request,'saludo.html')
+    return render(request, "saludo.html")
 
 
 def rango(request):
@@ -35,32 +38,42 @@ def rango(request):
         Resultado: <br>
     <ul>
     """
-    while a<=b:
+    while a <= b:
         resultado += f"<li> {a} </li>"
-        a+=1
+        a += 1
         resultado += "</ul"
     return HttpResponse(layout + resultado)
 
-def rango2(request,a,b):
+
+def rango2(request, a, b):
     resultado = f"""
     <h2> Números de [{a},{b}] </h2>
     Resultado: <br>
     <ul>
     """
-    while a<=b:
+    while a <= b:
         resultado += f"<li> {a} </li>"
-        a+=1
+        a += 1
         resultado += "</ul"
     return HttpResponse(layout + resultado)
 
-def rango2(request,a=0,b=100):
+
+def rango2(request, a=0, b=100):
     resultado = f"""
     <h2> Números de [{a},{b}] </h2>
     Resultado: <br>
     <ul>
     """
-    while a<=b:
+    while a <= b:
         resultado += f"<li> {a} </li>"
-        a+=1
+        a += 1
         resultado += "</ul"
     return HttpResponse(layout + resultado)
+
+
+"""
+def index(request):
+    return render(request, "/inicio"), {
+        "mensaje": "Proyecto web con Django (Desde el View)"
+    }
+"""
